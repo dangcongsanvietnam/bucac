@@ -1,15 +1,48 @@
 .login-form {
   background-color: white;
-  padding: 2rem;
-  width: 25%;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  margin-top: 2%;
+  width: 40%;
   left      : 50%;
   top       : 50%;
-  position  : absolute;
+  position: absolute;
   transform : translate(-50%, -50%);
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
+.hr-container {
+  margin-top: 30px;
+  margin-bottom: 40px;
+}
+.hr-line {
+  width: 100%; 
+  text-align: center; 
+  border-bottom: 1px solid #000; 
+  line-height: 0.1em;
+} 
+.hr-line span { 
+   background:#fff; 
+   padding:0 10px; 
+}
 .login-form-forgot {
   float: right;
+}
+.icon {
+  
+}
+.social-group {
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+.social-link {
+  margin-top: 2%;
+  margin-bottom: 2%;
+  padding: 10px;
+  padding-left: 20px;
+  display: flex;
+  justify-content: space-between;
 }
 .login-form-button {
   margin-top: 5%;
@@ -18,6 +51,9 @@
 }
 .form-title { 
   color: #000000;
+  text-align: center;
+}
+.signup-link {
   text-align: center;
 }
 

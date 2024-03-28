@@ -4,10 +4,6 @@
 
 
 body {
-  background-image: url('https://twistedsifter.com/wp-content/uploads/2013/05/animated-gifs-of-fighting-game-backgrounds-18.gif');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
   width: 100vw; /* Đảm bảo rằng phần tử .Container có chiều rộng bằng chiều rộng của trang */
   height: 100vh
 }
