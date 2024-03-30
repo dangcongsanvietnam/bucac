@@ -1,9 +1,0 @@
-.App {
-  text-align: center;
-}
-
-
-body {
-  width: 100vw; /* Đảm bảo rằng phần tử .Container có chiều rộng bằng chiều rộng của trang */
-  height: 100vh
-}
