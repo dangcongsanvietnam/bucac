@@ -1,4 +1,3 @@
-import { Helmet } from "react-helmet";
 import { Routes, Route } from "react-router-dom";
 import AccountManagement from "../components/admin/account";
 import DepartmentManagement from "../components/admin/department";
@@ -8,63 +7,42 @@ import SubjectManagement from "../components/admin/subject";
 import Login from "../components/UserAccount/Login/Login";
 import ScoreManagement from "../components/admin/score";
 import AttendenceManagement from "../components/admin/attendence";
+import ErrorPage from "../components/errors/ErrorPage";
+import ProtectedRouteDashboardAdmin from "./ProtectedRouteDashboardAdmin";
 
 export const AppRouter = () => {
   return (
     <>
-      <Helmet>
-        <title>System Management</title>
-        <meta name="description" content="System Management" />
-        <link rel="icon" type="image/x-icon" href={"logo"} />
-      </Helmet>
       <Routes>
         <Route path="/login" element={<Login />} />
+        <Route path="/error" element={<ErrorPage />} />
         <Route
           path="/dashboard/account"
-          element={
-            <AccountManagement />
-          }
+          element={<ProtectedRouteDashboardAdmin element={<AccountManagement />} />}
         />
         <Route
           path="/dashboard/department"
-          element={
-            <DepartmentManagement />
-          }
+          element={<ProtectedRouteDashboardAdmin element={<DepartmentManagement />} />}
         />
-
         <Route
           path="/dashboard/class"
-          element={
-            <ClassManagement />
-          }
+          element={<ProtectedRouteDashboardAdmin element={<ClassManagement />} />}
         />
-
         <Route
           path="/dashboard/student"
-          element={
-            <StudentManagement />
-          }
+          element={<ProtectedRouteDashboardAdmin element={<StudentManagement />} />}
         />
-
         <Route
           path="/dashboard/subject"
-          element={
-            <SubjectManagement />
-          }
+          element={<ProtectedRouteDashboardAdmin element={<SubjectManagement />} />}
         />
-
         <Route
           path="/dashboard/score"
-          element={
-            <ScoreManagement />
-          }
+          element={<ProtectedRouteDashboardAdmin element={<ScoreManagement />} />}
         />
-
         <Route
           path="/dashboard/attendence"
-          element={
-            <AttendenceManagement />
-          }
+          element={<ProtectedRouteDashboardAdmin element={<AttendenceManagement />} />}
         />
       </Routes>
     </>

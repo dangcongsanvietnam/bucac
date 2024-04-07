@@ -16,7 +16,7 @@ const items = [
   { title: 'Điểm danh', path: '/dashboard/attendence', icon: <ZoomInOutlined /> },
 ];
 
-const Dashboard = () => {
+const Dashboard = ({children}) => {
   const navigate = useNavigate();
   const [collapsed, setCollapsed] = useState(false);
 
@@ -65,7 +65,7 @@ const Dashboard = () => {
           </Row>
         </Header>
         <Content style={{ margin: '32px 16px' }}>
-          <div style={{ padding: 24, minHeight: 360, background: '#fff' }}>{/* Nội dung */}</div>
+          <div style={{ padding: 24, minHeight: 360, background: '#fff' }}>{children}</div>
         </Content>
         <Footer style={{ textAlign: 'center' }}>Copyright ©2023 Created by Ronaldo</Footer>
       </Layout>
